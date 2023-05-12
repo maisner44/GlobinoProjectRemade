@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <header>
+        <h1>{{department.title}}</h1>
+
+    </header>
+
+
+
+
+
+    <div class="all_content">
+    <div class = "func_window_descr">
+    <p class="pointn">Рядок із бази показників сенсорів №{{ point }}</p>
+        <table  cellspacing="40" class="styled-table">
+
+            <thead>
+                <tr>
+                    <th>Sensor</th>
+                    <th>min</th>
+                    <th>max</th>
+                    <th>current</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="{% static 'users/img/thermometer.svg' %}" alt=""></td>
+                    <td>{{department.min_t}}°C</td>
+                    <td>{{department.max_t}}°C</td>
+                    <td>{{ random_sensor.temperature }}°C</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'users/img/humidity.svg' %}" alt=""></td>
+                    <td>{{department.min_h}}%</td>
+                    <td>{{department.max_h}}%</td>
+                    <td>{{ random_sensor.humidity}}%</td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'users/img/wind.svg' %}" alt=""></td>
+                    <td>{{department.min_a}}m/s</td>
+                    <td>{{department.max_a}}m/s</td>
+                    <td>{{ random_sensor.air_currents}}m/s</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>
+        {% if user.update_permission == 'Y' %}
+        <div class="update_sensors_button_d"><a class = 'update_sensors_button' href="{% url 'dep_update' department.id %}">Change parameters</a></div>
+        {% endif %}
+        </div>
+
+<div class = "description_text"><p>{{department.description}}</p></div>
+        </div>
+
+<!--        <div class = "func_window_item">-->
+
+<!--            <ul>-->
+<!--                <li><h2>temperature °C</h2></li>-->
+<!--                <li><img src="{% static 'users/img/thermometer.svg' %}" alt=""></li>-->
+<!--                <li><h2>min_value<br>{{department.min_t}}</h2></li>-->
+<!--                <li><h2>max_value<br>{{department.max_t}}</h2></li>-->
+<!--                <li><h2>default_value<br>{{department.max_t}}</h2></li>-->
+<!--                <li><h2>current_value<br>780</h2></li>-->
+<!--                <li class = "update_button_li"><a class = 'update_button' href="{% url 'dep_update' department.id %}">Update</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class = "func_window_item">-->
+
+<!--            <ul>-->
+<!--                <li><h2>humidity %</h2></li>-->
+<!--                <li><img src="{% static 'users/img/humidity.svg' %}" alt=""></li>-->
+<!--                <li><h2>min_value<br>{{department.min_h}}</h2></li>-->
+<!--                <li><h2>max_value<br>{{department.max_h}}</h2></li>-->
+<!--                <li><h2>default_value<br>{{department.max_h}}</h2></li>-->
+<!--                <li><h2>current_value<br>780</h2></li>-->
+<!--                <li class = "update_button_li"><a class = 'update_button' href="{% url 'dep_update' department.id %}">Update</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class = "func_window_item">-->
+
+<!--            <ul>-->
+<!--                <li><h2>air currents m/sec</h2></li>-->
+<!--                <li><img src="{% static 'users/img/wind.svg' %}" alt=""></li>-->
+<!--                <li><h2>min_value<br>{{department.min_a}}</h2></li>-->
+<!--                <li><h2>max_value<br>{{department.max_a}}</h2></li>-->
+<!--                <li><h2>default_value<br>{{department.max_a}}</h2></li>-->
+<!--                <li><h2>current_value<br>780</h2></li>-->
+<!--                <li class = "update_button_li"><a class = 'update_button' href="{% url 'dep_update' department.id %}">Update</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+{% endblock %}

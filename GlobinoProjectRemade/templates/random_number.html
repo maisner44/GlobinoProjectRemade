@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Sensor</title>
+</head>
+<body>
+  <p id="sensor-data">Loading...</p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    function updateSensorData() {
+      $.ajax({
+        url: '/get-random-sensor/',
+        success: function(data) {
+          $('#sensor-data').text(data);
+        },
+        error: function() {
+          $('#sensor-data').text('Error loading data.');
+        }
+      });
+    }
+    // Call updateSensorData() initially
+    updateSensorData();
+    // Set up the timer to call updateSensorData() every 60 seconds
+    setInterval(updateSensorData, 60000);
+  </script>
+</body>
+</html>

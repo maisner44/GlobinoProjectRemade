@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class = 'enter_window'>
+
+
+        {% if user.is_authenticated %}
+            <div class="choose_but">
+                <a href="{% url 'dep_choose' %}">Choose department</a>
+            </div>
+        {% else %}
+        <img class = 'for_enter' src="{% static 'users/img/user 1.svg' %}" alt="">
+        <h1>Welcome</h1>
+                <ul class="ent">
+
+                    <a href="{% url 'login' %}"><li>Sign in</li></a>
+                    <a href="{% url 'register' %}"><li>Sign up</li></a>
+
+                </ul>
+
+        {% endif %}
+    </div>
+{% endblock %}

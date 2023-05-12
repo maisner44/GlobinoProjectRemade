@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class = 'enter_window'>
+
+  <h1>Form to create a department</h1>
+
+    <form method = 'post'>
+    <div class = "depart_items">
+      {% csrf_token %}
+      <div class = "dep_item">
+        {{form.title.label}}
+        {{form.title}}
+        {{form.description}}
+      </div>
+
+      <div class = "dep_item">
+        {{form.min_t.label}}
+        {{form.min_t}}<br>
+        {{form.max_t.label}}
+        {{form.max_t}}<br>
+        {{form.default_value_t.label}}
+        {{form.default_value_t}}<br>
+      </div>
+
+      <div class = "dep_item">
+        {{form.min_h.label}}
+        {{form.min_h}}<br>
+        {{form.max_h.label}}
+        {{form.max_h}}<br>
+        {{form.default_value_h.label}}
+        {{form.default_value_h}}<br>
+      </div>
+
+      <div class = "dep_item">
+        {{form.min_a.label}}
+        {{form.min_a}}<br>
+        {{form.max_a.label}}
+        {{form.max_a}}<br>
+        {{form.default_value_a.label}}
+        {{form.default_value_a}}<br>
+      </div>
+      <span>{{error}}</span>
+      <button type = 'submit'>Update</button>
+      </div>
+    </form>
+
+
+</div>
+{% endblock %}

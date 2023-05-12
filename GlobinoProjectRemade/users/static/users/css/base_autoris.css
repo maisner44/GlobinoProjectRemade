@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html,body{
+    height:100%;
+    margin: 0;
+
+
+}
+
+.back_img {
+  background-image: url('../img/glob1logo_back.png');
+  /* For Google Chrome */
+  filter: blur(0px);
+  /* Additional styles to set height, width, and other properties */
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:0;
+}
+
+.ladminka{
+    margin-top:5px;
+    padding:5px ;
+    border: 0px solid #000;
+    border-radius: 4px;
+    background:gray;
+    width:85px;
+}
+main .enter_window{
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    font-family: 'Roboto';
+    position: absolute; /* делаем позиционирование абсолютным */
+    top: 50%; /* располагаем блок на 50% от верхнего края страницы */
+    left: 50%; /* располагаем блок на 50% от левого края страницы */
+    transform: translate(-50%, -50%);
+    display: block; /* устанавливаем flex-контейнер */
+    justify-content: center;
+
+}
+
+main .regist_window{
+
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    font-family: 'Roboto';
+    position: absolute; /* делаем позиционирование абсолютным */
+    top: 50%; /* располагаем блок на 50% от верхнего края страницы */
+    left: 50%; /* располагаем блок на 50% от левого края страницы */
+    transform: translate(-50%, -50%);
+    display: block; /* устанавливаем flex-контейнер */
+    justify-content: center;
+
+
+}
+#myDiv {
+  text-align: center;
+}
+
+main .enter_window h1{
+    font-size: 32px;
+    margin:0px 70px 0px;
+}
+main .enter_window a{
+    text-decoration: none;
+    color: black;
+}
+main .enter_window .ent li{
+    text-align:center;
+    margin-top:20px;
+    font-size: 16px;
+    font-weight: bold;
+    padding:10px 9px 10px 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    width:200px;
+    background:#ffbd03;
+    transition:all .6s ease;
+}
+main .enter_window a :hover,main .enter_window .ent li :hover{
+    background: #D09C08;
+    transform:scale(1.)
+
+}
+main .enter_window .for_enter{
+    margin:30px 90px 0px;
+}
+main .under_reg img{
+    margin:0px 45px 0px;
+}
+
+main .login_page img{
+    margin:0px 45px 0px;
+}
+main .enter_window .ent{
+    list-style:none;
+    display: block; /* устанавливаем flex-контейнер */
+    justify-content: center;
+    margin:20px 30px 30px 0px;
+    padding-left:28px;
+
+}
+
+
+
+.left_info{
+    position: absolute;
+    z-index:3;
+}
+.left_info .left_menu{
+    list-style:none;
+    display: block;
+
+}
+.left_info .left_menu li{
+    color:white;
+}
+.left_info a{
+    text-decoration: none;
+
+    color: white;
+}
+
+//login field
+
+main .register_form{
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    font-family: 'Roboto';
+    position: absolute; /* делаем позиционирование абсолютным */
+    top: 50%; /* располагаем блок на 50% от верхнего края страницы */
+    left: 50%; /* располагаем блок на 50% от левого края страницы */
+    transform: translate(-50%, -50%);
+    display: block; /* устанавливаем flex-контейнер */
+    justify-content: center;
+}
+
+main .regist_inside{
+    display: block; /* устанавливаем flex-контейнер */
+    justify-content: center;
+    margin-top:0;
+    margin-left:40px;
+    margin-right:40px;
+    margin-bottom:40px;
+}
+main .regist_inside input{
+    font-size: 16px;
+    height:35px;
+    width:185px;
+    border: 1px solid #000;
+    border-radius:4px;
+}
+
+main .login_page input{
+    font-size: 16px;
+    height:35px;
+    width:185px;
+    border: 1px solid #000;
+    border-radius:4px;
+}
+main .regist_inside .reg label{
+    font-size: 20px;
+    font-style: bold;
+}
+main .register_button{
+    width:191px;
+    font-size:16px;
+    padding:10px 9px 10px 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background:#ffbd03;
+    transition:all .6s ease;
+
+}
+
+main button:hover {
+    background: #D09C08;
+}
+
+
+main .regist_inside .reg{
+    padding:0;
+    display:flex;
+    list-style:none;
+    justify-content: center;
+    margin:40px 0px 0px 0px;
+}
+
+
+
+main .regist_inside .reg li .under_reg{
+    list-style:none;
+    padding:0;
+    width:200px;
+
+}
+
+main .regist_inside .reg li .under_reg li{
+    margin-top:30px;
+}
+
+main .regist_inside .reg .reg_item ul{
+    list-style:none;
+}
+main .second{
+    margin:43px 20px 0px 100px;
+
+}
+main .second::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border-left: 1px solid black;
+}
+main .regist_inside .reg .reg_item {
+    width:250px;
+}
+main .regist_inside .reg .reg_item ul li{
+    margin-top:20px
+}
+main .login_page .login_page_item{
+    width:120px;
+    margin-top:20px;
+}
+main .login_page{
+    width:185px;
+    margin:40px 40px 40px 35px;
+}
+
+
+main .enter_window .content{
+    margin:20px;
+}
+main .buttons{
+    padding-left:0px;
+    padding-right:2px;
+    margin:20px;
+    list-style:none;
+    display:flex;
+}
+
+main .buttons li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top:50%;
+}
+
+
+main .buttons li{
+    margin-left:2px;
+    padding:20px;
+    height:80px;
+    width:120px;
+    background:white;
+    text-align:center;
+    transition:all .6s ease;
+    display: flex;
+    align-items: center;
+
+}
+
+
+main .buttons .dep_button:hover {
+    background: #B9B4B4;
+}
+
+main header{
+    display:block;
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+    position: absolute;
+    background-color:black;
+    width:100%;
+    height:120px;
+    z-index:2;
+    font-family:'Roboto';
+}
+main header h1{
+    color:white;
+    margin-top:35px;
+}
+
+main .func_window{
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    font-family: 'Roboto';
+    position: absolute; /* делаем позиционирование абсолютным */
+    top: 50%; /* располагаем блок на 50% от верхнего края страницы */
+    left: 50%; /* располагаем блок на 50% от левого края страницы */
+    transform: translate(-50%, -50%);
+    display: block; /* устанавливаем flex-контейнер */
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+
+main .func_window_item ul{
+    display:flex;
+    list-style:none;
+}
+
+main .choose_but {
+    font-size: 16px;
+    font-weight: bold;
+    padding:10px 10px 10px 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    width:150px;
+    background:#ffbd03;
+    transition:all .6s ease;
+
+}
+
+main .depart_items{
+    display:flex;
+}
+
+main .func_window h1{
+    text-align:center;
+}
+
+.update_button{
+    text-decoration:none;
+    color:black;
+    padding:10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background:orange;
+
+}
+main .func_window_item ul .update_button_li{
+    margin-top:45px;
+
+}
+
+main .func_window_item ul li{
+    text-align:center;
+    margin-left:25px;
+    padding-top:0;
+}
+
+main .func_window_item img{
+    margin-top:20px;
+}
+
+main .func_window_item ul{
+    border: 1px solid #000;
+}
+.func_window_item {
+    text-align:center;
+}
+
+
+
+
+
+.styled-table {
+    text-align:center;
+    background-color:white;
+    border-collapse: collapse;
+    margin: 0px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #6B070B;
+    color: #ffffff;
+    text-align: center;
+}
+.styled-table td{
+    font-size:30px;
+
+}
+
+.styled-table th{
+    font-size:24px;
+    padding: 20px;
+}
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+
+}
+
+.styled-table tbody tr:last-of-type {
+
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+main .all_content{
+    padding-top:0px;
+    justify-content: center;
+    display:flex;
+    position:absolute;
+    top:230px;
+    height:500px;
+
+    background: rgba(0, 0, 0, 0.4);
+    z-index:2;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+main .func_window_descr{
+    tex-align:center;
+    align-items: center;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    justify-content: center;
+    z-index:1
+
+}
+
+main .description_text{
+    height:200px;
+    color:white;
+    display: flex;
+    align-items: center;
+    z-index:2;
+
+}
+
+main .description_text p{
+
+    align-items: center;
+    z-index:1;
+
+    margin-top:270px;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.update_sensors_button{
+    text-decoration: none;
+
+    color:white;
+    display: block;
+    width: 100%;
+}
+.update_sensors_button_d{
+    display:flex;
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+    height:50px;
+    background:#6B070B;
+    transition:all .6s ease;
+}
+.update_sensors_button_d:hover{
+    background: #B4363B;
+}
+main .func_window_descr p{
+    color:white;
+}
+main .pointn{
+text-align:center;}

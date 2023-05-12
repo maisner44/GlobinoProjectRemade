@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <header>
+        <h1></h1>
+    </header>
+    <div class = "func_window">
+        <div class = "func_window_item">
+            <ul>
+                <li><img src="{% static 'users/img/thermometer 1.png' %}" alt=""></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class = "func_window_item">
+            <ul>
+                <li><img src="{% static 'users/img/humidity.png' %}" alt=""></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class = "func_window_item">
+            <ul>
+                <li><img src="{% static 'users/img/air-conditioner.png' %}" alt=""></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+{% endblock %}

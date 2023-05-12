@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class ="enter_window " id="myDiv">
+        <h3>Hi {{user.first_name}},here is available departments for you</h3>
+        <ul class="buttons">
+            <li class ='dep_button'>
+                {% if user.dep_1 == 'Y' %}
+                    <a href="{% url 'dep_detail' 1 %}">Department 1</a>
+                {% endif %}
+            </li>
+            <li class ='dep_button'>
+                {% if user.dep_2 == 'Y' %}
+                    <a href="{% url 'dep_detail' 2 %}">Department 2</a>
+                {% endif %}
+            </li>
+            <li class ='dep_button'>
+                {% if user.dep_3 == 'Y' %}
+                    <a href="{% url 'dep_detail' 3 %}">Department 3</a>
+                {% endif %}
+            </li>
+            <li class ='dep_button'>
+                {% if user.dep_4 == 'Y' %}
+                    <a href="{% url 'dep_detail' 4 %}">Department 4</a>
+                {% endif %}
+            </li>
+            <li class ='dep_button'>
+                {% if user.dep_5 == 'Y' %}
+                    <a href="{% url 'dep_detail' 5 %}">Department 5</a>
+                {% endif %}
+            </li>
+        </ul>
+<!--        <a href="{% url 'create' %}"><li><button>Create new dep</button></li></a>-->
+
+    </div>
+
+
+{% endblock %}
